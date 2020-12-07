@@ -1,31 +1,26 @@
 <?php
-
-$students=[
-    "rahim",
-    "kabir",
-    "tanvir",
-    "rasel",
+$foods=[
+    "22"=>"tanvir",
+    "23"=>"rasel",
+    "tainaki"=>"assa ai obosta",
 ];
-///add value in an array in the last 
-$students[]="rayhan";
+//addin valu in the last of associative array
 
-//remove last value from the array...
-$po=array_pop($students);
-$po=array_pop($students);
+$foods["tainaki"].=", oassa" ;
+$foods['tainaki']=$foods['tainaki'].", khondakr";
+print_r($foods);
+foreach($foods as $food){  /// for print associative array values  in php use foreach
+    echo $food."\n";
+}
 
-// remvoe first value from the array
-$si=array_shift($students);
+foreach($foods as $key=>$valu){  /// for print associative array in php use foreach
+    echo $key."=>".$valu."\n";
+}
 
-//adding value in first of array value
-$un=array_unshift($students,"23");
+$keys=array_keys($foods);    //use keyes for print values.....
 
-//adding value in the last of array
-$pu=array_push($students,"nuru vai");
-
-//replace value in an array by indexing
-$in=$students[0]="khondakar";
-
-$n= count($students);           //for loop use for print all of value from array  remember that it's very important
-for($i=0;$i<$n;$i++){
-    echo $students[$i]."\n";
+$n=count($keys);
+for($i=0;$i<$n; $i++){
+    $key=$keys[$i];
+    echo $foods[$key]."\n";
 }
