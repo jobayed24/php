@@ -1,26 +1,15 @@
 <?php
-$foods=[
-    "22"=>"tanvir",
-    "23"=>"rasel",
-    "tainaki"=>"assa ai obosta",
-];
-//addin valu in the last of associative array
+$name="jobayed, tanvir, shakawat, nuravai";      ///convert string to array and array to string 
+$ex=explode(', ',$name);
+print_r($ex);
 
-$foods["tainaki"].=", oassa" ;
-$foods['tainaki']=$foods['tainaki'].", khondakr";
-print_r($foods);
-foreach($foods as $food){  /// for print associative array values  in php use foreach
-    echo $food."\n";
-}
+$jo=join(", ",$ex);
+echo $jo;
 
-foreach($foods as $key=>$valu){  /// for print associative array in php use foreach
-    echo $key."=>".$valu."\n";
-}
 
-$keys=array_keys($foods);    //use keyes for print values.....
+$vergin="vargin2, vargin3, vargin4, vargin5,vargin6,vargin7";  ///preg slit used for detect mutiple delimeter
 
-$n=count($keys);
-for($i=0;$i<$n; $i++){
-    $key=$keys[$i];
-    echo $foods[$key]."\n";
-}
+$pre=preg_split("/(, |,)/",$vergin);
+
+print_r($pre);
+echo count($pre);
