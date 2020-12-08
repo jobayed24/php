@@ -1,17 +1,32 @@
 <?php
-$data=[
-    "fname"=>"jobayed",
-    "lname"=>"hossen",
-    "section"=>"B",
-    "roll"=>"22"
-];
+$person=['fname'=>'jobayed','lanme'=>'khondakar'];
 
-$serialize=serialize($data);   ///use serialze functions to save array data anywhere but it's useablitly isn't like json encode 
+//dep copy ,copy by value
 
-$unserialize=unserialize($serialize);
-print_r($unserialize);
+$newperson=$person;
 
-$en=json_encode($data);         ///use json encode and decode for save data an array of php but need always json for it's two useabilit....i can use this valu in php also i can JS
-$de=json_decode($en,true);
+$newperson['fname']='rasel';
 
-print_r($de);
+print_r($newperson);
+
+print_r($person);
+
+//copy by reference or shallow copy
+
+$person2=&$person;
+
+$person2['fname']='nuru vai';
+
+print_r($person2);
+
+print_r($person);
+
+
+function newPerson($person){   ///shawllow copy deep copy by a function
+    $person['fname']='ruddra';
+    print_r($person);
+} 
+
+newPerson($person);
+
+print_r($person);
