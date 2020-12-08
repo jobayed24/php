@@ -1,17 +1,12 @@
 <?php
 
-//findout some value from an plain array by array slic
+////extrat some value of array also insert some value of array in previous array by array_splice
 
-$data=['tanvir','rasel','shakawat','nuru vai','khondakar'];
+$fruits=['mango','banana','jakfruits','pinapple'];
 
-$dataslic=array_slice($data,-3,-1,true);
+$newfruits=['traito','applepi'];
 
-print_r($dataslic);
+$somefruits=array_splice($fruits,-3,-2,$newfruits);
 
-//findout or extrat some value from an associative array by array slic
-
-$dataSlic=['a'=>23,'v'=>34,'g'=>55,'h'=>35,'t'=>45,23=>45];     ///when array keys have numeric key if want to carry the index of associative keys then must use true in an array slic
-
-$dataslic=array_slice($dataSlic,3,null,true);
-
-print_r($dataslic);
+print_r($somefruits);
+print_r($fruits);
