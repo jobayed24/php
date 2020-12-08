@@ -1,11 +1,19 @@
 <?php
-$person=['fname'=>'jobayed','lanme'=>'khondakar'];
-
-//unset function use for remove data  form an associative array
-
-
-print_r($person);
-
-unset($person['fname']);
-
-print_r($person);
+$person;
+if(isset($person)){
+    echo "name is set";
+}else{
+    echo "name is empty";
+}
+echo "\n";
+if(empty($person)){
+    echo "name is empty";
+}else{
+    echo "name is\'t not empty";
+}
+echo "\n";
+if(isset($person) && (is_numeric($person) || $person!='')){
+    echo "name is set and it's not an empty";
+}else{
+    echo "name is not set or empty";
+}
