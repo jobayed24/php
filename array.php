@@ -1,22 +1,15 @@
 <?php
-///seach key or value in array by using array_search,,,in_array,,,array_exit
 
-$fruits=['p'=>'pineaple',"j"=>'jeckfruit','t'=>'tomato','l'=>'letu32s','a'=>'apple'];
-$numbers=[2,74,33,32,24,67,22,55,43,66];
-$alphabaets=['apple','Apple','cucumber','Cucumber','beat','Beat'];
 
-//// in index array if value is twice or thrice or more it print first value index .....
-if(in_array(2,$numbers)){
-    echo "this number is exit" ;
-}else{
-    echo "this number is not exit";
-}
-echo "\n";
-$exit=array_search(33,$numbers);
-echo $exit;
+$fruit1=['p'=>'pineaple',"j"=>'jeckfruit','t'=>'tomato','l'=>'letu32s','a'=>'apple'];
+$number2=[2,74,33,32,24,67,22,55,43,66];
+$number3=[3,6,88,32,66,89];
+$fruit2=['apple','Apple','cucumber','Cucumber','beat','Beat'];
 
-echo "\n";
+////find same valu wihout key and wtih key find difference with key and without key
+$numbers=array_intersect_assoc($number2,$number3);
+print_r($numbers);
 
-if(key_exists("p",$fruits)){
-    echo "key is exit";
-}
+$fruits=array_diff($fruit1,$fruit2);
+
+print_r($fruits);
