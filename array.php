@@ -1,33 +1,26 @@
 <?php
+$fruits=['p'=>'pineaple',"j"=>'jeckfruit','t'=>'tomato','l'=>'letu32s','a'=>'apple'];
+$numbers=[2,74,33,32,24,67,22,55,43,66];
+$alphabaets=['apple','Apple','cucumber','Cucumber','beat','Beat'];
 
-////extrat some value of array also insert some value of array in previous array by array_splice
+sort($alphabaets,SORT_STRING | SORT_FLAG_CASE);
 
+print_r($alphabaets);
 
-///basically use array merge for adding extract two array's values in one array 
-///but + isn't now perfect for same plain index of array
+krsort($fruits);      ///sorting by sort /ksort/foreah for orginnial key reminder...
 
-///important
+print_r($fruits);
 
-///if it will associative array and it's keys is numerice than if you want to print it your should use 
-////array slice and also array + || merge and if you want to add some valus you use array_splice for that
+$array_values=array_values($fruits);
 
-$fruits=['mango','banana','jakfruits','pinapple'];
+for($i=0; $i<count($fruits); $i++){
+    echo $fruits[$i]."\n";
+}
+for($i=0; $i<count($array_values); $i++){
+    echo $array_values[$i]."\n";
+}
 
-$fruits2=['torando','jakndo','makndo','jainfruit'];
-
-$fruit4=array_slice($fruits,-3,2,true);
-$fruit5=array_slice($fruits2,-3,2,true);
-print_r($fruit4);
-print_r($fruit5);
-$newfruits=array_merge($fruit4,$fruit5);
-
-print_r($newfruits);
-$enter_new_fruit=['jk','khandakar'];
-$newsplic=array_splice($fruits2,-3,2,$enter_new_fruit);
-
-print_r($newsplic);
-$arraymerg=array_merge($fruit4,$fruit5);
-print_r($arraymerg);
-
-$newentry=$fruit4+$fruit5;
-print_r($newentry);
+echo "\n";
+foreach($fruits as $key=>$value){
+    echo $key.'='.$value."\n";
+}
