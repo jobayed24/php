@@ -3,13 +3,22 @@
 
 $fruit1=['p'=>'pineaple',"j"=>'jeckfruit','t'=>'tomato','l'=>'letu32s','a'=>'apple'];
 $number2=[2,74,33,32,24,67,22,55,43,66];
-$number3=[3,6,88,32,66,89];
+$number3=[2,3,4,5];
 $fruit2=['apple','Apple','cucumber','Cucumber','beat','Beat'];
 
-////find same valu wihout key and wtih key find difference with key and without key
-$numbers=array_intersect_assoc($number2,$number3);
-print_r($numbers);
+//assign array value as a variable 
+list($prothom,$second,$third,$fourth)=$number3;
 
-$fruits=array_diff($fruit1,$fruit2);
+echo $prothom; 
 
-print_r($fruits);
+function sum($oldvalue,$newvalue){
+    $oldvalue=$oldvalue+$newvalue;
+    return $oldvalue;
+}
+
+$sum2 =array_reduce(array(2),"sum");
+
+print_r($sum2);
+echo "\n"; 
+$co=count($number3);
+echo $co;
