@@ -2,22 +2,19 @@
 
 
 $fruit1=['p'=>'pineaple',"j"=>'jeckfruit','t'=>'tomato','l'=>'letu32s','a'=>'apple'];
-$number2=[2,74,33,32,24,67,22,55,43,66];
-$number3=[2,3,4,5];
-$fruit2=['apple','Apple','cucumber','Cucumber','beat','Beat'];
 
 
-$number=range(22,40);
+////data key loose if i use shuffle in an array
+//// to do without it array_rand use is good
 
-$rnd=rand(0,18);
+shuffle($fruit1);
 
-$pickrand=$number[$rnd];
-echo $pickrand;
+$rnd=array_rand($fruit1);
+print_r($rnd);
 echo "\n";
-if($pickrand % 2==0){
-    echo "this number  is even";
-}else{
-    echo "this number is odd";
-}
-shuffle($number);
-echo $number[0]; 
+echo $fruit1[$rnd];
+
+$fruits=$fruit1;
+$rand=rand(0,4);
+shuffle($fruits);
+echo $fruits[$rand]; 
