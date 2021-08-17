@@ -12,7 +12,7 @@ $all_needed_values=array("fruits"=>array("banana","pineapple","jackfruits","mang
                         "name"=>array("jk","jobayed","tanvir","shakawat","rasel"));
 
 
-                        $result=count($all_needed_values);
+                        $result=count($all_needed_valuesCOUNT_RECURSIVE);
 
 
                         print_r($result);
